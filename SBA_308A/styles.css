@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    padding: 1rem;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#breedSelect {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+#progressBar {
+    height: 5px;
+    background-color: #76c7c0;
+    width: 0;
+    transition: width 1s ease;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: scroll;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.carousel-item {
+    min-width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.favourite-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+  }
+.favourite-button:hover {
+    color: red;
+    width: 36px;
+    height: 36px;
+    top: 7px;
+    right: 12px;
+  }
+
+.info-dump {
+    background-color: white;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#getFavouritesBtn{
+    background-color:rgb(47, 205, 47);
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    height: auto;
+}
+#getFavouritesBtn:hover{
+    background-color: lightgreen;
+}
+
+

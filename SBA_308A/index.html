@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="index.js"></script>
+    <title>Cat Breed Selector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Cat Breed Selector</h1>
+    </header>
+    <main>
+        <section class="controls">
+            <label for="breedSelect">Choose a breed:</label>
+            <select id="breedSelect">
+                <option value="">Select a breed</option>
+            </select>
+            <button id="getFavouritesBtn">Get Favourites</button>
+            
+        </section>
+        <section class="progress">
+            <div id="progressBar" class="progress-bar"></div>
+        </section>
+        <section id="carousel" class="carousel"></section>
+        <section id="infoDump" class="info-dump"></section>
+    </main>
+    <script src="index.js" type="module"></script>
+</body>
+</html>
