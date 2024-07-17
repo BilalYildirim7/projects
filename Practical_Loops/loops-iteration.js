@@ -1,39 +1,85 @@
+/*function Car(Name, Model, Year, Color) {
+  this.Name = Name;
+  this.Model = Model;
+  this.Year = Year;
+  this.Color = Color;
+  this.drive = function() {
+    console.log(`You drive a ${this.Name}`);
+  };
+}
+const car1= new Car("Toyota","Camryn","2013","Black");
+const car2= new Car("Nissan","Camryn","2013","Black");
+const car3= new Car("Honda","Camryn","2013","Black");
+const car4= new Car("Fort","Camryn","2013","Black");
+car2.drive();
+car3.drive();
+car4.drive();*/
 
-///Part 1: Fizz Buzz
-for (let i = 1; i <= 100; i++) {
-  if (i % 3 === 0 && i % 5 === 0) {
-      console.log("Fizz Buzz");
-  } else if (i % 3 === 0) {
-      console.log("Fizz");
-  } else if (i % 5 === 0) {
-      console.log("Buzz");
-  } else {
-      console.log(i);
+/*class product {
+  constructor(name, price){
+    this.name=name;
+    this.price=parseFloat(price.replace('$',''));
+  }
+  displayProduct(){
+    console.log(`Product: ${this.name}`);
+    console.log(`Product: ${this.price.toFixed(2)}`);
+  }
+  calculateTotal(salestax) {
+   return this.price +(this.price*salestax)
   }
 }
-///Part 2: Prime Time
-function isPrime(num) {
-  if (num <= 1) {
-      return false;
+const salestax =0.05;
+const product1 =  new product("T-shirt","$10.99");
+const product2 =  new product("Pant","$11.929");
+
+product2.calculateTotal();
+
+const total= product2.calculateTotal(salestax);
+console.log(`The total price with tax is ${total.toFixed(2)} `);
+*/
+class MathUtil{
+  static PI = 3.14159;
+  static getDiameter(radius){
+      return radius * 2;
   }
-  if (num <= 3) {
-      return true;
+  static getCircumference(radius){
+      return 2 * this.PI * radius;
   }
-  if (num % 2 === 0 || num % 3 === 0) {
-      return false;
+  static getArea(radius){
+      return this.PI * radius * radius;
   }
-  for (let i = 5; i * i <= num; i += 6) {
-      if (num % i === 0 || num % (i + 2) === 0) {
-          return false;
-      }
-  }
-  return true;
 }
 
-// Testing the function with various numbers
-console.log(isPrime(2));  // true
-console.log(isPrime(3));  // true
-console.log(isPrime(4));  // false
-console.log(isPrime(5));  // true
-console.log(isPrime(16)); // false
-console.log(isPrime(17)); // true
+console.log(MathUtil.PI);
+console.log("Daimeter "+ MathUtil.getDiameter(10));
+console.log("Circumference " +MathUtil.getCircumference(10));
+console.log("Area "+MathUtil.getArea(10));
+
+class User {
+  static userCount = 0;
+
+  constructor(username) {
+    this.username = username;
+    User.userCount++;
+  }
+
+  static getUserCount() {
+    console.log(`There are ${User.userCount} users online`);
+  }
+
+  sayHello() {
+    console.log(`Hello, my username is ${this.username}`);
+  }
+}
+
+const user1 = new User("Bilal");
+const user2 = new User("Bilal");
+const user3 = new User("Bilal");
+const user4 = new User("Bilal");
+
+user1.sayHello();
+user2.sayHello();
+user3.sayHello();
+user4.sayHello();
+
+User.getUserCount();
