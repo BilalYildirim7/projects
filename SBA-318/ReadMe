@@ -1,0 +1,25 @@
+# Library API
+
+This project is a simple Express server application for managing 
+a library with users, posts, and comments. 
+It includes middleware for logging requests and 
+handling errors, and it uses EJS as the view engine.
+
+## Project Structure
+
+```plaintext
+.
+├── middleware
+│   ├── authMiddleware.js
+│   ├── errorMiddleware.js
+│   └── logMiddleware.js
+├── models
+│   ├── comments.js
+│   ├── posts.js
+│   └── users.js
+├── public
+│   └── css
+│       └── styles.css
+├── routes
+│   ├── comments.js
+│   ├── posts
